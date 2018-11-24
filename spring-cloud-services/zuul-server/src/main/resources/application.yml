@@ -1,0 +1,52 @@
+server:
+  port: 5001
+spring:
+  application:
+    name: zuul-server
+zuul:
+  ignored-services: '*'
+  host:
+    max-total-connections: 1000
+    max-per-route-connections: 1000
+  routes:
+    student-microservice:
+      path: /api/student/**
+      sensitive-headers: null
+      service-id: student-microservice
+      strip-prefix: false
+ribbon:
+  eureka:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 10000000
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://localhost:8700/eureka/
+      
+info:
+  app:
+    name: zuul-server
+    description: Zuul Proxy Server
+    version: v1.0
+endpoints:
+  actuator:
+    enabled: true
+    sensitive: true
+  health:
+    enabled: true
+    sensitive: true
+  metrics:
+    enabled: true
+    id: metrics
+    sensitive: true
+management:
+  security:
+    enabled: false

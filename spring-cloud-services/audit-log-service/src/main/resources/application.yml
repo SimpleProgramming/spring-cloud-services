@@ -1,0 +1,8 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: audit-log-service
+  cloud:
+    config:
+      uri: http://localhost:8888

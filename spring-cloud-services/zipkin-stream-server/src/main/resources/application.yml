@@ -1,0 +1,50 @@
+server:
+  port: 9900
+spring:
+  application:
+    name: zipkin-stream-server
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+          zkNodes: 127.0.0.1:2181
+      bindings:
+        sleuth:
+          destination: zipkintrace
+zipkin:
+  storage:
+    type: cassandra3
+  cassandra3:
+    contact-points: 127.0.0.1:9042
+    username: cassandra
+    password: cassandra
+    keyspace: zipkintrace
+    ensure-schema: true
+
+
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url.defaultZone: http://localhost:8700/eureka/
+
+info:
+  app:
+    name: zipkin-stream-server
+    description: Zipkin Stream Server
+    version: v1.0
+endpoints:
+  actuator:
+    enabled: true
+    sensitive: true
+  health:
+    enabled: true
+    sensitive: true
+  metrics:
+    enabled: true
+    id: metrics
+    sensitive: true
+management:
+  security:
+    enabled: false

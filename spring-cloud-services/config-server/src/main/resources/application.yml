@@ -1,0 +1,89 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:gopikrishhnaChokkalamani/spring-cloud-config-repo.git
+          search-paths:
+          - configuration/{application}/
+          - configuration/
+          private-key: |
+                        -----BEGIN RSA PRIVATE KEY-----
+                        MIIJKQIBAAKCAgEAz7kJc/9+WzVGcCC8IzZrqiGiVt0h99D78idhgpzbbIq9TJ6Q
+                        wN0ImNwmm6yMKm8W2N410pduILUyr98zdLiAWM9HZSyI6zXouVE6aUs/Rzl9lUm+
+                        8W6azirGRPWHFLF8clDS11bGlVHS+YAWWP0Qb2En4tI8S8PCH5Sx6ThxZv+Y9Yi3
+                        zHxsYjNX0FWj1l0AiS1U34jCBBhAmqtvJSvKcV2ZKlmVVUIRedyD2K0fhyA35Nf4
+                        6PRHWAOjXlwmPRmMWpSrDb/UByt99N8FqxYoXtiSSd4LKokcs65jGp+FjWJVcXQW
+                        q7rAZbzTn8j4EMoOSKyyiZI14oiee1NMOk8vT5sI74rpDRxkygQp+7Juax99zVMZ
+                        WbdWsbqnQ1tEhePb7KfYuLS58MZi2koUO5/FRYz884lMzNt62OstLU+BOWlHT0l6
+                        sfH1PBaaaYcPYEsmbKpfyiT5SyOdBdAY8bJJ1xVyEyGGrUw8AtbIbO+ZCiz1pVTD
+                        eMnvAFLHgJpb0JmyPCCN5Mt6fLhh4z1U78LO4hEFTChk7ElG8fsPT8rnqIk3QC9J
+                        Uo/gxFzV0J7yB7WjsFuyH0EuRVlHUwCSAq2vtTw6jb4wMAtFXq1VsqR0HucVjHWB
+                        UzL3zVGq8v7rU2Grd0hU1sLUeG5KbWjX0zhag8ARvQEOBw8Oxx/Z7c/oLu0CAwEA
+                        AQKCAgBG+2kijW0lR8hBKr5/neoeog2ydzBTWcOulQx6MJW+uo5Db2/xp9Z3Pcun
+                        qMfg/EMnao+j3gFRBfpDJReVTDL3piU0iopjLfHP2dUHBCKkeR3T9PZd1DjsOKu2
+                        BtzZEml/OuVBlrKXdfWNMtrwH9IM7XtOxB68mTFtz0cYdiQyWSdwx/5ezynOSNM6
+                        Kvmol/FF7wqwtC/wbEUvVWPOpO8x3BUp5qDkGIaWSOd5FHfQmg7fkXnKSSdUCTI7
+                        XWvntyJCFcl6ElIm/RK2qbtrIlA7UPB0c38HUwFO2UmeYGKn1LFz6oKQvmlemq8K
+                        TAeQ3SsSZIlB/4eQWLUnWWiUCFkW0XghsNBXfy3HJvTvP4gzrZFoYYe9E9typSNL
+                        xh9bolTDD49NsQCYy7gnnNyEPF8WCBpEhQyMK3hoPzJqYcEeKeOtWLxmVfWo6JbF
+                        8KtBceC9eDlAhlj5yxpkVM9yYcJgboNYNhjErdc2vVNdebwahWeBYl4kZ3FnP9GR
+                        MbjJqrqZQXy/1JIpVCQDusKuoALgYDNYMdukk3TwJTchc97vS/oTpR1fAPWMamKh
+                        5Lv2rkFSocsRmN7g91Laf96HhrOKoLCzmxJuq+mkXNtmDByTaoA0IY9NZJT6T5NO
+                        CGYiAjJpNF7fOb+PwTOKieDkDrTM/03Ft4qxFu9LXpOsgQBdIQKCAQEA/qC7+5Ha
+                        rFpt5npkcQt3SyhkdYj+fy5L5WGi7ZnQNE/Ooj/fXNhC/wMoOc8KN23o5Hb4OU5e
+                        to5i4wpe6YEIFK3YJ+2Vcehvk8siVgVLrsAnNjjxALlyqzQ15EQeU/Mxu9PcjnVI
+                        qOYCXbxpnQDcZSjJgd5iWJ4HXmBOE2dsd8NLMtBZcGZFPGLZcXbSeipWdTcAq8Jp
+                        +foDLhy81vQ24H3U/ILP1zjRaVCiKo+FzHpujsz5F5qWA5+/TdWlFEY5+IFhPcaz
+                        6EwzhgHymceCEf+JPKfe7ph6EpTW1eXQapqPMrOITbclzLz0slrWInZSkGDX1P6P
+                        IzyUPlnQjzqIFQKCAQEA0NeYiwfcicqpbXxO+Jl0Io5KnpO4uBmxDfuCHqRYaUxu
+                        FO733GNJhjSeifzGlcPN7VjDtTc3spU+rOWHX/t2DeZZMC+amq8/gVa1Ps/Hzb7b
+                        yOqterJ/hhz8DfHBcTDutHDbjgnZ5DtNtO7yJuXoVKGg67HDuGidlUxbYPJFnfJT
+                        LZ4SIvDZmNscmmaEf7ZQ+j3V0vEPCYThm3hynUC9Q/o/vCp5dVT0bTcmQRs9uL0n
+                        eSGak+GChbOgm2p9zFBl2fV1TC7M6ppVM/kC0QUeJttuqnhHWwNf3C1gdu8lzDS6
+                        JTLLhK+ohAumt+Os1QtTAoGjghYdODAi4PZyxcipeQKCAQEAq0wEytw3iUWYs7nZ
+                        AnfdPDGjS7LqyzKhGmKR0lhsyhR6hYqEwJg4kghUsndHfzywtaoXma3QZ+3oNqdO
+                        bLZCcm71gP8DT8s37Ox2X/pWDOz2NDMgZwVbUDPioXr2EDIGXj7MHQZn6EA8jUTo
+                        pBflLSTAU18BOG6vtF0DiWhFf1hhqYCi+svCfjpd4Eg4lrkOyvJCwEodM29vXkE1
+                        BULr/CCK/YkfO8Hcl4YIYquFLqea4vSgCrITg8KfV0SINth7vWOEwKOBeqBw9REw
+                        XSXrqiIH+EdS4Z6wWPnKgcGGcYEjHs/KvcWdZ1wjHi2f6zVAnCKacI8ESodBj6Sq
+                        ewC8dQKCAQAhyA4TxzTEUTTw0d/QVLo1cMDfP9Psa7N5KIrWvAzVE5jm5/TOAH1/
+                        KPnQJkRVK3QfBXG62XC4AW4+923bd8iT3QPmSH0AsoJaQJVW0LNoM4xHxrZDF6aL
+                        IhsfglChJ6IlK/BH3I4TXghm0RP4eM4JCpAGMB4RsVJ0OQK6/tWGBBGyWlRitITu
+                        Nds9moGqSup0YBY7ZeThzE3WITig+TzkRxGSNWiqMxDKrdYRR//G50oATRA9BYhg
+                        ajr7iNFKgGLJS+wqY5OgC1Dm9EuhVeuXq30ONCCOt1AFRI3LD0oU6x6FL9892lAu
+                        89eG/VwSph9KU4AIZd1aHmc17oeIOLo5AoIBAQD1z9U7127wz+K+SST9sg0OcJ4K
+                        EN0Ia9N9Or+jKSQGNbxNBRfbDlkW3tvbUfA4N5ZlruwUmZCjyjXRoyAtLU0VzvcG
+                        7UOrHxm4M5oA+Ix2FBBPF7zxr8yhAuBSLgKkFQ0/aK+ZQrNlohqSxck4fsZ0fucg
+                        FHrQ3ZsnhlPF5sTsqN2xMcrgChdq1Ize6LQVPwrdxzUPrkWU0DTFqQkQr/D1Krfy
+                        nRZcBHvcrXXeXNlLz6e/tKmTj8r0X54amlta/QRBQctDl8gMHhGYgCfbNgSsIPs9
+                        UaC251PUE+0wrj6SVJrTstTzPJsb7ZbXmzKU1QNkaAUKJiqzu7a6i8k0Lhsz
+                        -----END RSA PRIVATE KEY-----
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url.defaultZone: http://localhost:8700/eureka/
+
+info:
+  app:
+    name: config-server
+    description: Config Server
+    version: v1.0
+endpoints:
+  actuator:
+    enabled: true
+    sensitive: true
+  health:
+    enabled: true
+    sensitive: true
+  metrics:
+    enabled: true
+    id: metrics
+    sensitive: true
+management:
+  security:
+    enabled: false

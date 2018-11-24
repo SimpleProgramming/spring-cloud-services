@@ -1,0 +1,19 @@
+student:
+  property:
+  - field: firstName
+    maxlength: 45
+    minlength: 3
+    format: '[A-Za-z]*'
+    validator: fieldValidator
+  - field: lastName
+    maxlength: 45
+    minlength: 3
+    format: '[A-Za-z]*'
+    validator: fieldValidator
+  - field: age
+    format: '[0-9]*'
+    validator: fieldValidator
+  - field: major
+    validator: enumValidator
+  - field: address
+    validator: validationRouter

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: admin-server
+server:
+  port: 7700
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url.defaultZone: http://localhost:8700/eureka/
+info:
+  app:
+    name: admin-server
+    description: Admin Server
+    version: v1.0
+endpoints:
+  actuator:
+    enabled: true
+    sensitive: true
+  health:
+    enabled: true
+    sensitive: true
+  metrics:
+    enabled: true
+    id: metrics
+    sensitive: true
+management:
+  security:
+    enabled: false

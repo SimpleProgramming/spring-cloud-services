@@ -1,0 +1,15 @@
+server:
+  port: 3000
+spring:
+  application:
+    name: student-microservice
+  profiles:
+    include:
+    - student
+    - address
+  cloud:
+    config:
+      uri: http://localhost:8888
+configuration:
+  property:
+    value: local version

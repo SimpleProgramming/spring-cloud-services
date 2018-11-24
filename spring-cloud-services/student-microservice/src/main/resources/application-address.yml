@@ -1,0 +1,21 @@
+address:
+  property:
+  - field: doorNo
+    maxlength: 6
+    minlength: 1
+    validator: fieldValidator
+  - field: street
+    maxlength: 45
+    minlength: 3
+    validator: fieldValidator
+  - field: city
+    maxlength: 12
+    minlength: 3
+    validator: fieldValidator
+  - field: state
+    maxlength: 10
+    minlength: 3
+    validator: fieldValidator
+  - field: zipCode
+    format: '[0-9]*'
+    validator: fieldValidator

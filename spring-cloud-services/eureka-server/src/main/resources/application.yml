@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8700
+eureka:
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 20000
+    response-cache-update-interval-ms: 10000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    eureka-service-url-poll-interval-seconds: 30
