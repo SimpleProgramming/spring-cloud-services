@@ -20,9 +20,10 @@
 
 
 # Microservice - Distributed Tracing and Visualization
-. Zipkin (log tracing tool - autoconfig)
+. Zipkin (In Memory) (log tracing tool - autoconfig) 
 
-. Zipkin (log tracing tool - streaming log data through kafka and storing it in cassandra)
+. Zipkin (log tracing tool - streaming log data through Apache kafka and storing it in Cassandra)
+  - Make sure to install Kafka, Cassandra and start them before starting the zipkin stream server
 
 ![Zipkin Log Tracing](https://github.com/gopikrishhnaChokkalamani/spring-cloud-services/blob/master/spring-cloud-services/zipkin-service.png)
 
